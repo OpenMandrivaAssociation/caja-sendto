@@ -1,12 +1,10 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 %define oname    mate-file-manager-sendto
-%define version  1.6.0
-%define release  1
 
 Summary:        Send files from caja using with mail or IM
 Name:           caja-sendto
-Version:        %{version}
-Release:        %{release}
+Version:        1.6.0
+Release:        1
 URL:            http://www.mate-desktop.org
 Source0:        http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{version}.tar.xz
 License:        GPLv2+
@@ -88,9 +86,6 @@ NOCONFIGURE=1 ./autogen.sh
 %makeinstall_std
 
 %find_lang %{name} --all-name
-
-find %{buildroot} -name '*.la' -exec rm -rf {} ';'
-find %{buildroot} -name '*.a' -exec rm -rf {} ';'
 
 %files -f %{name}.lang
 %doc AUTHORS COPYING README
