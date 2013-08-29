@@ -4,7 +4,7 @@
 Summary:        Send files from caja using with mail or IM
 Name:           caja-sendto
 Version:        1.6.0
-Release:        1
+Release:        4
 URL:            http://www.mate-desktop.org
 Source0:        http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{version}.tar.xz
 License:        GPLv2+
@@ -28,8 +28,8 @@ BuildRequires:  gajim
 Provides:       %{oname}-sendto-gajim 
 Provides:       %{oname}-sendto-email
 Provides:       %{oname}-sendto-evolution
-Provides:       %{oname} = %{version}-%{release}
 
+%rename %{oname}
 
 Suggests:       %{name}-bluetooth
 Requires:       caja
@@ -44,8 +44,8 @@ the file/files.
 Summary:    Send files from caja to pidgin
 Group:      Graphical desktop/Other
 Requires:   pidgin
-Requires:   %name = %version
-Provides:   %name-sendto-gaim
+Requires:   %{name} = %{version}
+Provides:   %{name}-sendto-gaim
 Provides:   %{oname}-sendto-pidgin = %{version}-%{release}
 
 %description pidgin
@@ -57,8 +57,8 @@ dialog for insert the IM account which you want to send the file/files.
 %package upnp
 Summary:   Send files from nautilus via UPNP
 Group:     Graphical desktop/Other
-Requires:  %name = %version
-Provides:  %{oname}-sendto-upnp = %{version}-%{release}
+Requires:  %{name} = %{version}
+%rename    %{oname}-upnp
 
 %description upnp
 This application provides integration between caja and UPNP.
