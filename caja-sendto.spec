@@ -5,7 +5,7 @@ Summary:        Send files from caja using with mail or IM
 Name:           caja-sendto
 Version:        1.6.0
 Release:        4
-URL:            http://www.mate-desktop.org
+URL:            https://www.mate-desktop.org
 Source0:        http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{version}.tar.xz
 License:        GPLv2+
 Group:          Graphical desktop/Other
