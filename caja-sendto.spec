@@ -10,6 +10,11 @@ Source0:        http://pub.mate-desktop.org/releases/%{url_ver}/%{oname}-%{versi
 License:        GPLv2+
 Group:          Graphical desktop/Other
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(libcaja-extension)
 BuildRequires:  pkgconfig(mate-desktop-2.0)
 BuildRequires:  pkgconfig(mate-doc-utils)
